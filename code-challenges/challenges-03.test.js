@@ -79,7 +79,7 @@ const alphabetizeBetter = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
-Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowest to highest, returning the same array.
+Write a function named sortByPrice that takes in an array of objects, each of which has a 'price' property, and sorts those objects by price, lowst to highest, returning the same array.
 
 Here is an example of the input:
 [
