@@ -14,7 +14,7 @@ const createServer = () => {
 
   app.get('/', homeRoute);
   app.delete('/things/1', deleteRoute);
-  app.use('*', notFoundHandler);
+  app.use('/*', notFoundHandler);
 
   function homeRoute(request, response) {
     response.sendStatus(200);
