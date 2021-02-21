@@ -63,3 +63,16 @@ The final structure should resemble this:
   ├── package.json
   └── README.md
 ```
+
+# Reverse an Array
+Code challenge 1 asks us to write a function which takes in an array, then alters the array in place in order to reverse the order of its elements.
+
+## Challenge
+Taking in an array of any size, with an odd or even number of elements, or even an empty array, the function should return an array with the same number of elements, only with their indexes reversed.
+
+## Approach & Efficiency
+This function was provided for us this first day.
+Essentially we are looking to have two objects, one representing the first indexed object and the other the last. These objects will esentially swap values, then the starting index object will increment and the ending index object will decrement, until both values mett in the 'center' of the array where the function will end.
+
+## Solution
+![Whiteboard](array-reverse.png)
