@@ -1,4 +1,6 @@
-# 
+# Class 01 - Array Reverse
+
+- [Pull Request]()
 
 # Challenge Summary
 <!-- Short summary or background information -->
@@ -11,3 +13,7 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+## Whiteboard
+
+![Whiteboard](./array-reverse.png)
