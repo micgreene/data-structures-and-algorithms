@@ -63,3 +63,16 @@ The final structure should resemble this:
   ├── package.json
   └── README.md
 ```
+- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+# Challenge Summary
+Array Shift: This challenge requires us to insert a number into an array in a certain index.
+
+## Challenge Description
+Write a function that takes in an array and a value to be added. Without using any built in methods, return an array with the new value added at the middle index.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Embedded whiteboard image -->
