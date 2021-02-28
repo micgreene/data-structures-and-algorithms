@@ -6,21 +6,19 @@ CHALLENGE 1 - Review
 Build a simple express server. Connect a '/hello' route that sends a greeting of your  choice. Connect a '/aboutme' route that sends a short bio about you to the front-end. Finally, connect a '/favoritefoods' route that sends an array to the front-end of your favorite foods. All other routes should respond with a status of 404.
 ------------------------------------------------------------------------------------------------ */
 
+// Express sever here
 const createServer = () => {
   const express = require('express');
   const app = express();
-  
-  app.get('/hello', helloHandler);
-  app.get('/aboutme', aboutMeHandler);
-  app.get('/favoritefoods', foodHandler);
 
-  function helloHandler(request, response){
-    response.send('Hello there!');
-  }
+  // Routes go here
+  app.get('/hello', sayHi);
+  app.get('/aboutme', bio);
+  app.get('/favoritefoods', favFoods);
+  app.use('/*', notFoundHandler);
 
-  function aboutMeHandler(request, response){
-    response.send('Born free.');
-  }
+
+
 
   var server = app.listen(3301, function () {
     var port = server.address().port;
@@ -29,6 +27,22 @@ const createServer = () => {
   return server;
 };
 
+function sayHi(request, response) {
+  response.status(200).send('hi');
+}
+
+function bio(request, response) {
+  response.status(200).send('I\'m the type of guy who eats an entire jar of kalamata olives as a meal.');
+}
+
+function favFoods(request, response) {
+  const foodArray = ['Tonkotsu Ramen', 'Grilled Steak', 'Okra and Bacon', 'Kalamata Olives', 'Fried Chicken', 'Baked Potatoes', 'NJ pizza', 'Toasted Bagels', 'Roast Beef Sub w/ Provolone', 'Penne Vodka', 'Veal Parm.'];
+  response.status(200).send(foodArray);
+}
+
+function notFoundHandler(request, response) {
+  response.sendStatus(404);
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -40,7 +54,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let numMatch = 0;
+  input.filter(outterEl => {
+    outterEl.filter(innerEl => {
+      if (target === innerEl) {
+        numMatch++;
+      }
+    });
+  });
+  return numMatch;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +76,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let sumNum = 0;
+  input.filter(outterEl => {
+    outterEl.filter(innerEl => {
+      sumNum += innerEl;
+    });
+  });
+  return sumNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +98,18 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  let expArr = [];
+  expArr = input.filter(outterEl => {
+    let retArr = [];
+    retArr = outterEl.filter(innerEl => {
+      return(innerEl%5 === 0);
+    });
+    retArr = retArr.filter(innerEl => {
+      return(Math.pow(2, innerEl));
+    });
+    return retArr;
+  });
+  return expArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
