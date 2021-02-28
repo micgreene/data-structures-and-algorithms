@@ -1,4 +1,4 @@
-# Class 01 - Array Reverse
+# Code Challenge 01 - Array Reverse
 
 - [Pull Request]()
 
