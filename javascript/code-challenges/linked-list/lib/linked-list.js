@@ -44,6 +44,14 @@ class LinkedList {
     }
   }
 
+  inserBefore(value, newVal){
+
+  }
+
+  insertAfter(value, newVal){
+
+  }
+
   //input: any given value
   //output: a boolean result
   //returns a value depending on whether the input value exists as a Node’s value somewhere within the list or not
