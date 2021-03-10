@@ -44,12 +44,45 @@ class LinkedList {
     }
   }
 
-  inserBefore(value, newVal){
+  insertbefore(searchVal, newVal) {
+    let currNode = this.head;
+    let prevNode = new Node(null);
+    let node = new Node(newVal);
 
+    if (!this.head) {
+      this.head = node;
+    } else {
+      while (currNode.next) {
+        if (currNode.value === searchVal) {
+          if (prevNode.value === null) {
+            this.head = node;
+            this.head.next = currNode;
+          } else {
+            prevNode.next = node;
+            node.next = currNode;
+          }
+        }
+        prevNode = currNode;
+        currNode = currNode.next;
+      }
+    }
   }
 
-  insertAfter(value, newVal){
+  insertafter(searchVal, newVal) {
+    let currNode = this.head;
+    let node = new Node(newVal);
 
+    if (!this.head) {
+      this.head = node;
+    } else {
+      while (currNode.next) {
+        if (currNode.value === searchVal) {
+          node.next = currNode.next;
+          currNode.next = node;
+        }
+        currNode = currNode.next;
+      }
+    }
   }
 
   //input: any given value
