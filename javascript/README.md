@@ -7,3 +7,6 @@
 - Code Challenge 01: [Array Reverse](code-challenges/array-reverse/README.md)
 - Code Challenge 02: [Array Shift](code-challenges/array-shift/README.md)
 - Code Challenge 03: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 04: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 05: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 06: [Array Binary Search](code-challenges/array-binary-search/README.md)
