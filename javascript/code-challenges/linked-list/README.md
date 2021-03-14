@@ -1,12 +1,12 @@
-# Code Challenge 05 - Linked List Implementation
+## Code Challenge 05 - Linked List Implementation
 
 - [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/20)
 
-## Singly Linked List
+### Singly Linked List
 
--In this challenge, we are to create a singly linked list. (meaning each node will posses a pointer to the next node (and its value) in the chain, but not the previous)
+- In this challenge, we are to create a singly linked list. (meaning each node will posses a pointer to the next node (and its value) in the chain, but not the previous)
 
-## Challenge
+### Challenge
 
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 
@@ -22,7 +22,7 @@
 
 - Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
 
-## Approach & Efficiency
+### Approach & Efficiency
 
 I decided to do TDD for this assignment.
 
@@ -32,6 +32,34 @@ I decided to do TDD for this assignment.
 
 - When all cases were passing, I went back over to comment out and clean up my code.
 
-## API
+### API
 
 - *None* New
+
+## Code Challenge 07 - Linked List Kth from End
+
+- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/22)
+
+### Challenge 7
+
+- Write a method for the Linked List class which takes a number, k, as a parameter.
+
+  - Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Approach & Efficiency
+
+For this assignment I white boarded the logic, using pseudo code to understand what I was doing before I began coding.
+
+- I first came up with the idea of using counters and 2 loops to first count the length of the linked list and then to run through it a certain number of positions.
+  
+- I then went back through to include edge cases like an empty linked list, a linked list with one node, searching the list with a number that is negative or too large, etc.
+
+- I then began testing my logic against the given cases.
+
+### API
+
+- *None* New
+
+### Whiteboard
+
+![Whiteboard](./code-challenge7.jpg)

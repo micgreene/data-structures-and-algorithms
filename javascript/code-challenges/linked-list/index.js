@@ -10,6 +10,6 @@ linkedlistobj.append(3);
 linkedlistobj.append(4);
 linkedlistobj.append(5);
 
-linkedlistobj.insertafter(2,90);
+linkedlistobj.kthfromend(5);
 
 console.log(linkedlistobj);

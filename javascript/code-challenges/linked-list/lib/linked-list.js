@@ -85,6 +85,46 @@ class LinkedList {
     }
   }
 
+  //input: any given number
+  //output: none
+  //adds a new node with that value to the 'head' of the list
+  kthfromend(searchIndx) {
+    let currNode = this.head;
+    let nodeCount = 0;
+
+    //find out how long the linked list is
+    if (!this.head) {
+      return console.log('Error: Linked List Empty');
+    } else {
+      while (currNode) {
+        nodeCount++;
+        currNode = currNode.next;
+      }
+    }
+    nodeCount = nodeCount - (searchIndx);
+    currNode = this.head;
+
+    let tempCount = 0;
+    while (currNode) {
+      if (nodeCount <= 0) {
+        return null;
+      } else if (tempCount === nodeCount) {
+        return currNode.value;
+      }
+
+      tempCount++;
+
+      if(tempCount === nodeCount) {
+        return currNode.value;
+      }
+      currNode = currNode.next;
+
+      if(currNode === null){
+        return null;
+      }
+    }
+  }
+
   //input: any given value
   //output: a boolean result
   //returns a value depending on whether the input value exists as a Node’s value somewhere within the list or not
