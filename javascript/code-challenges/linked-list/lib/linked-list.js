@@ -106,21 +106,21 @@ class LinkedList {
 
     let tempCount = 0;
     while (currNode) {
-      if (nodeCount < 0) {
-        return console.log('Error: Out of Index');
+      if (nodeCount <= 0) {
+        return null;
       } else if (tempCount === nodeCount) {
-        return console.log(`Value of node at position ${nodeCount}: `, currNode.value);
+        return currNode.value;
       }
 
       tempCount++;
 
       if(tempCount === nodeCount) {
-        return console.log(`Value of node at position ${nodeCount}: `, currNode.value);
+        return currNode.value;
       }
       currNode = currNode.next;
 
       if(currNode === null){
-        return console.log('Error: Out of Index');
+        return null;
       }
     }
   }

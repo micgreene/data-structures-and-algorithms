@@ -70,4 +70,55 @@ describe('Linked List', () => {
 
     expect(testCase).toEqual('{1} -> {2} -> {3} -> NULL');
   });
+
+  it('Where k is greater than the length of the linked list', ()=>{
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    let testCase = list.kthfromend(4);
+
+    expect(testCase).toEqual(null);
+  });
+
+  it('Where k and the length of the list are the same', ()=>{
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    let testCase = list.kthfromend(3);
+
+    expect(testCase).toEqual(null);
+  });
+
+  it('Where k is not a positive integer', ()=>{
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    list.append(6);
+    list.append(7);
+    let testCase = list.kthfromend(3);
+
+    expect(testCase).toEqual(4);
+  });
+
+  it('Where the linked list is of a size 1', ()=>{
+    list.append(1);
+    let testCase = list.kthfromend(0);
+
+    expect(testCase).toEqual(1);
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', ()=>{
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    list.append(6);
+    list.append(7);
+    let testCase = list.kthfromend(5);
+
+    expect(testCase).toEqual(2);
+  });
 });
