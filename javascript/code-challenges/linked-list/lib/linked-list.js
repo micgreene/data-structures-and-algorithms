@@ -44,6 +44,9 @@ class LinkedList {
     }
   }
 
+  //input: any given value, any given value
+  //output: none
+  //searches the first given value in the linked list and inserts the second given value in the node prior to it
   insertbefore(searchVal, newVal) {
     let currNode = this.head;
     let prevNode = new Node(null);
@@ -68,6 +71,9 @@ class LinkedList {
     }
   }
 
+  //input: any given value, any given value
+  //output: none
+  //finds the first given value in the linked list and inserts the second given value in the node after it
   insertafter(searchVal, newVal) {
     let currNode = this.head;
     let node = new Node(newVal);
@@ -124,6 +130,8 @@ class LinkedList {
       }
     }
   }
+
+  
 
   //input: any given value
   //output: a boolean result

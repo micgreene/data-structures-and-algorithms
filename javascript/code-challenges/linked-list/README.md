@@ -60,6 +60,6 @@ For this assignment I white boarded the logic, using pseudo code to understand w
 
 - *None* New
 
-### Whiteboard
+### Solution
 
 ![Whiteboard](./code-challenge7.jpg)
