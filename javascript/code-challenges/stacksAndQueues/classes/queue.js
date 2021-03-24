@@ -1,5 +1,7 @@
 'use strict';
 
+const Node = require('./node.js');
+
 class Queue {
   constructor() {
     this.front = null;
@@ -8,25 +10,27 @@ class Queue {
   }
 
   enqueue(item) {
-    this.storage.push(item);
+    let node = new Node(item);
+
+    this.storage.push(node.value);
     if (this.storage.length === 1) {
-      this.front = item;
-      this.rear = item;
+      this.front = node;
+      this.rear = node;
     } else{
-      this.rear = item;
+      this.rear = node;
     }
   }
 
   dequeue() {
     if (this.storage.length < 1) {
-      return 'empty queue';
+      return 'Empty Queue!';
     }
 
     //assigns item as first item in the array to dequeue
-    let item = this.storage.shift();
+    let node = this.storage.shift();
 
     //if we removed the last item, reset all properties to null
-    if (this.storage.length === 0) {
+    if (this.storage.length < 1) {
       this.front = null;
       this.rear = null;
     }
@@ -35,10 +39,26 @@ class Queue {
       this.front = this.storage[0];
       this.rear = this.storage[this.storage.length - 1];
     }
-    return item;
+    return node;
   }
 
+  peek(){
+    if(this.storage.length < 1){
+      return 'Empty Queue!';
+    } else{
+      return this.front;
+    }
+  }
 
+  isEmpty(){
+    let empty = true;
+    if(!this.front){
+      return empty;
+    } else {
+      empty = false;
+      return empty;
+    }
+  }
 }
 
 module.exports = Queue;
