@@ -1,5 +1,5 @@
 # Stacks and Queues
-- Code challenge 9 - create 2 classes, Stack and Queue, which use a 3rd class, Node, as items in their storages. 
+- Code challenge 10 - create 2 classes, Stack and Queue, which use a 3rd class, Node, as items in their storages. 
 
 - We then create several methods to add and remove items from the stack(FILO) and queue(FIFO).
 
