@@ -33,4 +33,4 @@ I also added a 'name' property so the little buddies have some individual charac
 
 ### Solution
 
-![Whiteboard](./CodeChallenge12 - 401js.jpg)
+![Whiteboard](./CodeChallenge12-401js.jpg)
