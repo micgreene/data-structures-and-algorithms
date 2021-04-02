@@ -1,65 +1,36 @@
 # Code Challenge 12 - First-in, First out Animal Shelter
 
-- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/20)
+- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/26)
 
-### Singly Linked List
+## First-in, First out Animal Shelter
 
-- In this challenge, we are to create a singly linked list. (meaning each node will posses a pointer to the next node (and its value) in the chain, but not the previous)
+- In this challenge, we are to create a queue class which accepts nodes that contain the property "Animal". Each node's Animal property could either be "dog" or "cat." Dequeueing can be done with a preference to dog or cat and return the node closest to the front with the preferred property.
 
-### Challenge
+## Challenge
 
-- Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+- Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+- Implement the following methods:
+  - enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+  - dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
-- Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
-  - Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+## Approach & Efficiency
 
-  - Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+For this assignment I started with my 'Queue' class I created for one of the previous labs.
 
-  - Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
-    - "{ a } -> { b } -> { c } -> NULL"
+I replaced the 'Node' class with an 'Animal' class that contains an 'animal' property instead of a 'value.'
 
-- Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+The enqueueing method just needs to be changed to .push(animal) instead of .push(node).
 
-- Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
+The dequeueing method required me to create a loop that checks starting from the front position of the storage array and recurses through it to the end, while the current index does not contain mathch the 'pref' animal passed as a parameter.
 
-### Approach & Efficiency
+For this, I used a TDD method by creating scenarios for the .dequeue() method to pass and then created new functionality as I went.
 
-I decided to do TDD for this assignment.
+I also added a 'name' property so the little buddies have some individual character! (=^･ｪ･^=)~
 
-- Instead of trying to figure out what the requirements were asking me to do, I instead looked through the list of tests.
-  
-- I wrote one testing case, attempted to implement code that passed itk, then moved on.
+## API
 
-- When all cases were passing, I went back over to comment out and clean up my code.
-
-### API
-
-- *None* New
-
-## Code Challenge 07 - Linked List Kth from End
-
-- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/22)
-
-### Challenge 7
-
-- Write a method for the Linked List class which takes a number, k, as a parameter.
-
-  - Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
-
-### Approach & Efficiency
-
-For this assignment I white boarded the logic, using pseudo code to understand what I was doing before I began coding.
-
-- I first came up with the idea of using counters and 2 loops to first count the length of the linked list and then to run through it a certain number of positions.
-  
-- I then went back through to include edge cases like an empty linked list, a linked list with one node, searching the list with a number that is negative or too large, etc.
-
-- I then began testing my logic against the given cases.
-
-### API
-
-- *None* New
+- *None*
 
 ### Solution
 
-![Whiteboard](./code-challenge7.jpg)
+![Whiteboard](./CodeChallenge12 - 401js.jpg)
