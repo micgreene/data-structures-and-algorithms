@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('./node.js');
+let Node = require('./node.js');
 
 class Stack {
   constructor() {
@@ -23,7 +23,7 @@ class Stack {
     } else {
       let node = this.storage.pop();
       console.log(this.storage);
-      return node;
+      return node.value;
     }
   }
 
