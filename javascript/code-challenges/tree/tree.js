@@ -21,3 +21,7 @@ console.log('Binary Tree Post-Ordered: ', JSON.stringify(tree.postOrder()));
 let searchVal = 6;
 
 console.log(`Does tree contain a ${searchVal}? `, tree.contains(searchVal));
+
+searchVal = 7;
+
+console.log(`Does tree contain a ${searchVal}? `, tree.contains(searchVal));
