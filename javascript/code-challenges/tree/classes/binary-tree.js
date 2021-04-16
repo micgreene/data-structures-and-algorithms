@@ -64,7 +64,6 @@ class BinaryTree {
       return 'Empty Tree!';
     }
 
-    let iteration = 0;
     let nodes = [];
     let queue = [];
 
@@ -80,8 +79,6 @@ class BinaryTree {
       if (currentNode.right) {
         queue.push(currentNode.right);
       }
-
-      
     }
     return nodes;
   }
