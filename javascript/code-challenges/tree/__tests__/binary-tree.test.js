@@ -1,8 +1,8 @@
 'use strict';
 
-const Tree = require('../classes/binary-search-tree.js');
+const Tree = require('../classes/binary-tree.js');
 
-describe('TESTS FOR BINARY TREE AND BINARY SEARCH TREE CLASSES', () => {
+describe('TESTS FOR THE BINARY TREE CLASS', () => {
   let tree = null;
 
   beforeEach(() => {
@@ -80,5 +80,18 @@ describe('TESTS FOR BINARY TREE AND BINARY SEARCH TREE CLASSES', () => {
     tree.add(7);
 
     expect(tree.contains(7)).toEqual(true);
+  });
+
+  //case #8 - FindMaximumValue Method
+  it('Can successfully return the maximum value of the Binary Tree ', () => {
+    tree.add(4);
+    tree.add(6);
+    tree.add(2);
+    tree.add(3);
+    tree.add(1);
+    tree.add(5);
+    tree.add(7);
+
+    expect(tree.findMaximumValue()).toEqual(7);
   });
 });
