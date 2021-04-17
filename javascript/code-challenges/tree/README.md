@@ -58,23 +58,30 @@ For this assignment I white boarded the logic, using pseudo code to understand w
 
 ## Code Challenge 17 - Breadth-first Traversal
 
-- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/33)
+- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/35)
 
 ### Challenge
 
-- Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+- Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
 
 ### Approach & Efficiency
 
-For this assignment I white boarded the logic, using pseudo code to understand what I was doing before I began coding.
+For this assignment I white boarded the logic, using pictures to clarify what was happening each iteration:
 
-- I knew how to walk through the tree recursively thanks to the preorder() method from previous code challenges, so that's how I traversed through the tree.
+- For this challenge I tried to visualize a call stack to keep track of what was happening.
 
-- I knew I wanted a value to keep track of what was the biggest value encountered so far, so I created a let called 'maxValue'.
+- I knew I wanted to list the value of each row of the tree from left to right, so I ensured that first the .left child would be evaluated, then the right. I accomplished this by creating an array which pushes each node encountered into it.
 
-- I knew this value had to be compared to everything in the tree, so I also created a let called 'currNode' to keep track of the current value to be compared.
+- I iterated through the array by creating a while loop which checks to see if the array is empty, if not then it continues through the array. When the array empties, the while loop will end and we return an array full of node values encountered.
 
-- I decided to do this with a while loop which just keeps checking to see if there is a current node value to compare until there isn't. Then maxValue is returned.
+- Inside the while loop, the node storage array then has the first item added to it removed, adds the node value to our return array, then checks to see if it first has a left child (to maintain the 'breadth' order) then a right child.
+
+- Each node value is pushed into the queue array as this is happening in the order each is encountered.
+
+- This ensures each node will be evaluated by the while loop until there are none remaining.
+
+- Big O(n)
+- Space(h) (h = height of binary tree)
 
 ### API
 
@@ -82,4 +89,4 @@ For this assignment I white boarded the logic, using pseudo code to understand w
 
 ### Solution
 
-![Whiteboard](./code-challenge_16.jpg)
+![Whiteboard](./code-challenge_17.jpg)
