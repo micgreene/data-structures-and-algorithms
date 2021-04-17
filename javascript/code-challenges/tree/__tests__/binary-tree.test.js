@@ -72,14 +72,15 @@ describe('TESTS FOR THE BINARY TREE CLASS', () => {
   //case #7 - Contains Method
   it('Can successfully return true when passed a value already contained within the Binary Tree', () => {
     tree.add(4);
-    tree.add(6);
     tree.add(2);
     tree.add(3);
     tree.add(1);
     tree.add(5);
     tree.add(7);
+    tree.add(9);
+    tree.add(6);
 
-    expect(tree.contains(7)).toEqual(true);
+    expect(tree.contains(6)).toEqual(true);
   });
 
   //case #8 - FindMaximumValue Method
@@ -93,5 +94,18 @@ describe('TESTS FOR THE BINARY TREE CLASS', () => {
     tree.add(7);
 
     expect(tree.findMaximumValue()).toEqual(7);
+  });
+
+  //case #9 - BreadthFirst Method
+  it('Can successfully return a collection from a breadth first traversal', () => {
+    tree.add(4);
+    tree.add(6);
+    tree.add(2);
+    tree.add(3);
+    tree.add(1);
+    tree.add(5);
+    tree.add(7);
+
+    expect(tree.breadthFirst()).toEqual([4,2,6,1,3,5,7]);
   });
 });
