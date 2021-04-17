@@ -2,6 +2,8 @@
 
 ## Code challenge 15 - Binary Tree and BST Implementation
 
+- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/30)
+
 ## Challenge
 
 - **Create a Node class** that has properties for the value stored in the node, the left child node, and the right child node.
@@ -26,7 +28,7 @@ I searched the tree in a similar way to using a binary search array:
 
 ## Code Challenge 16 - Find the Maximum Value in a Binary Tree
 
-- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/31)
+- [Pull Request](https://github.com/micgreene/data-structures-and-algorithms/pull/33)
 
 ### Challenge
 
