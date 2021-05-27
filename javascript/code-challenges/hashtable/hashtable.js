@@ -37,27 +37,74 @@ class HashMap{
     this.map[hash].append(entry);
   }
 
-  get(){
+  get(key){
     //1-hash the key
-    //2 - get value of this.map[hash]
-    //3-traverse the linked list and fimd the actual one (collisions means there is more than one)
-    //4 - return that value
+    let hash = this.hash(key);// should return a number of the index
 
+    //if linked list is empty then return null
+    if(this.map[hash] === undefined){
+      return null;
+    }
+
+    //2 - get value of this.map[hash]
+    let currNode = this.map[hash].head;
+
+    //3-traverse the linked list and fimd the actual one (collisions means there is more than one)
+    while(currNode !== null){
+      if(key === Object.keys(currNode.value)[0]){
+
+        //4 - return that value
+        return currNode.value[key];
+      }
+
+      currNode = currNode.next;
+    }
+
+    return null;
   }
 
-  has(){
+  contains(key){
     //1-hash the key
+    let hash = this.hash(key);// should return a number of the index
+
+    //if linked list is empty then return false
+    if(this.map[hash] === undefined){
+      return false;
+    }
+
     //2 - get value of this.map[hash]
+    let currNode = this.map[hash].head;
+
     //3-traverse the linked list and fimd the actual one (collisions means there is more than one)
-    //4 - return true or false
+    while(currNode !== null){
+      if(key === Object.keys(currNode.value)[0]){
+
+        //4 - return true if found
+        return true;
+      }
+
+      currNode = currNode.next;
+    }
+
+    //4 - return false if not
+    return false;
   }
 }
 
-let testMap = new HashMap();
+// let testMap = new HashMap(10);
 
-console.log('empty hash map: ', testMap);
 
-testMap.set('Mike', 'O.G.');
+// testMap.set('Mike', 'O.G.');
+// testMap.set('Willson', 'Mr. Smiley');
+// testMap.set('Terry', 'Turbo');
+// testMap.set('Darren', 'Dare-Bear');
+// testMap.set('Manolio', 'The Professor.');
 
-console.log('Hash Table feat. MKG: ', testMap);
+// console.log('Hash Table feat. MKG: ', JSON.stringify(testMap.map), '\n');
+// console.log('yes Get Method: ', testMap.get('Mike'));
+// console.log('no Get Method: ', testMap.get('Bobby'));
+// console.log('yes Has Method: ', testMap.has('Mike'));
+// console.log('no Has Method: ', testMap.has('Bobby'));
+// console.log('hashed value: ', testMap.hash('Mike'));
+
 module.exports = HashMap;

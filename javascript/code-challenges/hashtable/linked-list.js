@@ -176,6 +176,28 @@ class LinkedList {
     }
     return stringVal;
   }
+
+  //input: any given value
+  //output: a boolean result
+  //returns a value depending on whether the input value exists as a Node’s value somewhere within the list or not
+  get(value) {
+    let node = new Node(value);
+
+    if (!this.head) {
+      return false;
+    } else {
+      let current = this.head;
+
+      while (node.value !== current.value && current.next) {
+        current = current.next;
+
+        if (node.value === current.value) {
+          return true;
+        }
+      }
+      return false;
+    }
+  }
 }
 
 module.exports = LinkedList;
