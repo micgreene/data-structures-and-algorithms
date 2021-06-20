@@ -4,7 +4,7 @@ const LinkedList = require('./linked-list.js');
 
 class HashMap{
   //to avoid collisions:
-  //create a new hashtable of *2 size
+  //create a new hashtable of x2 size
   //for each thing in old hash table, do a .set() to the  new table
   //delete old hash table
   constructor(size){
