@@ -8,7 +8,14 @@
 ## Challenge
 <!-- Description of the challenge -->
 
-+ Implement your own Graph. The graph should be represented as an adjacency list.
++ 35: Implement your own Graph. The graph should be represented as an adjacency list.
+
++ 36: Write the following method for the Graph class:
+
+  + breadthFirst
+    + Arguments: Node
+    + Return: A collection of nodes in the order they were visited.
+  + Display the collection
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
