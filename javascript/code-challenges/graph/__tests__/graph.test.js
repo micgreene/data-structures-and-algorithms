@@ -113,4 +113,66 @@ describe('GRAPH CLASS TESTS', () => {
 
     expect(graph.getNodes()).toEqual(null);
   });
+
+  //test case #9
+  it('Can be traversed breadth-first, returning an array of nodes encountered in order', () => {
+    //reset graph
+    graph = new Graph();
+
+    graph.addNode(a);
+    graph.addNode(b);
+    graph.addNode(c);
+    graph.addNode(d);
+    graph.addNode(e);
+    graph.addNode(f);
+
+    graph.addDirectedEdge(a, f);
+    graph.addDirectedEdge(f, a);
+    graph.addDirectedEdge(f, c);
+    graph.addDirectedEdge(c, f);
+    graph.addDirectedEdge(c, e);
+    graph.addDirectedEdge(e, c);
+    graph.addDirectedEdge(e, d);
+    graph.addDirectedEdge(d, e);
+    graph.addDirectedEdge(d, b);
+    graph.addDirectedEdge(b, d);
+
+    expect(graph.breadthFirst()).toEqual( [
+      {'value': 'a'},
+      {'value': 'f'},
+      {'value': 'c'},
+      {'value': 'e'},
+      {'value': 'd'},
+      {'value': 'b'}
+    ]);
+  });
+
+  //test case #10
+  it('Trying to traverse breadth-first through an empty graph properly returns null', () => {
+    //reset graph
+    graph = new Graph();
+
+    expect(graph.breadthFirst()).toEqual(null);
+  });
+
+  //test case #11
+  it('Trying to traverse breadth-first through a graph with a single item returns a single node', () => {
+    //reset graph
+    graph = new Graph();
+
+    graph.addNode(a);
+
+    expect(graph.breadthFirst()).toEqual([{'value': 'a'}]);
+  });
+
+  //test case #12
+  it('Trying to traverse breadth-first through a graph with no edges returns a single node', () => {
+    //reset graph
+    graph = new Graph();
+
+    graph.addNode(a);
+    graph.addNode(b);
+
+    expect(graph.breadthFirst()).toEqual([{'value': 'a'}]);
+  });
 });
