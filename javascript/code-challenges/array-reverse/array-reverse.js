@@ -5,7 +5,7 @@ function reverseArray(arr){
   let endIndx = arr.length - 1;
 
   while (startIndx <= endIndx) {
-    let tmp = startVal;
+    let tmp = startIndx;
     arr[startIndx] = arr[endIndx];
     arr[endIndx] = tmp;
     startIndx++;
