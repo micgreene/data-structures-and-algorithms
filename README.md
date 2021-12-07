@@ -1,15 +1,6 @@
 # Data Structures and Algorithms
 
-## Create a copy of this repository
-
-1. Create a new repository in your GitHub account called `data-structures-and-algorithms`
-1. Clone the empty repository to your machine
-1. Choose the "Download" option under "Clone or Download" for this repository
-1. Copy that .zip file inside of the local `data-structures-and-algorithms` repo created in step 2
-1. Unzip the file there
-1. Remove the .zip file
-1. Run the command `npm install` from the repository root directory
-1. Do an `ACP` of the `data-structures-and-algorithms` repository
+See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
 ## Repository Quick Tour and Usage
 
@@ -21,6 +12,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
+- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 - Each Data Structure should be implemented separately in a language specific manner, in a properly named folder.
   - i.e. `linked-lists`
 - For daily challenges:
@@ -63,16 +55,16 @@ The final structure should resemble this:
   ├── package.json
   └── README.md
 ```
+- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
-# Reverse an Array
-Code challenge 1 asks us to write a function which takes in an array, then alters the array in place in order to reverse the order of its elements.
+# Challenge Summary
+Array Shift: This challenge requires us to insert a number into an array in a certain index.
 
-## Challenge
-Taking in an array of any size, with an odd or even number of elements, or even an empty array, the function should return an array with the same number of elements, only with their indexes reversed.
+## Challenge Description
+Write a function that takes in an array and a value to be added. Without using any built in methods, return an array with the new value added at the middle index.
 
 ## Approach & Efficiency
-This function was provided for us this first day.
-Essentially we are looking to have two objects, one representing the first indexed object and the other the last. These objects will esentially swap values, then the starting index object will increment and the ending index object will decrement, until both values mett in the 'center' of the array where the function will end.
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![Whiteboard](array-reverse.png)
+<!-- Embedded whiteboard image -->

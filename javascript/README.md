@@ -1,51 +1,24 @@
-# Data Structures and Algorithms
+# 401js - Data Structures and Algorithms
 
 ## Language: `JavaScript`
 
-### Folder and Challenge Setup
+### Code Challenges
 
-### Data Structures
-
-For each data structure implementation
-
-- Create a new folder under the `javascript` level, with the name of the data structure and complete your implementation there
-  - i.e. `linked-list`
-- Implementation (the data structure "class")
-  - The implementation of the data structure must be named `index.js`
-- Tests
-  - Create folder named `__tests__` and within it, a test file called `[data-structure].test.js`
-    - i.e. `__tests__/linked-list.test.js`
-    - Your tests will then need to require the data structure you're testing
-      - i.e. `const LinkedList = require('../index');
-
-### Daily Code Challenges
-
-Code challenges should be completed within a folder named `code-challenges` under the `javascript` level
-
-- Daily Setup:
-  - Create a new folder under the `javascript` level, with the name of the code challenge, as dictated by the challenge instructions
-    - i.e. `code-challenges/reverse-ll`
-  - Code Challenge Implementation
-    - Name the actual challenge file with the name of the challenge, unless otherwise noted in the assignment
-      - i.e. `reverse-ll.js`
-      - Your challenge file will then need to require the data structure you're using to implement
-      - i.e. `const LinkedList = require('../linked-list');
-  - Tests
-    - Create folder named `__tests__` and within it, a test file called `[challenge].test.js`
-      - i.e. `__tests__/reverse-ll.test.js`
-      - Your test file would require the challenge file found in the directory above.
-        - i.e. `const reverse = require('../reverse-ll.js');
-
-### Running Tests
-
-If you setup your folders according to the above guidelines, running tests becomes a matter of deciding which tests you want to execute.  Jest does a good job at finding the test files that match what you specify in the test command
-
-From the root of the `data-structures-and-algorithms` folder, execute the following commands:
-
-- **Run every possible test** - `npm test`
-- **Run a test for a data structure - `npm test linked-list`
-- **Run a test for a specific challenge - `npm test reverse-ll`
-
-#### Live Tests
-
-Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the  **Actions** tab
+- Code Challenge 01: [Array Reverse](code-challenges/array-reverse/README.md)
+- Code Challenge 02: [Array Shift](code-challenges/array-shift/README.md)
+- Code Challenge 03: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 04: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 05: [Array Binary Search](code-challenges/array-binary-search/README.md)
+- Code Challenge 06: [Linked List Insertions](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 07: [K-th Value from the End of a Linked List](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 08: [Zip Two Linked Lists](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 09: [Zip Two Linked Lists](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 10: [Zip Two Linked Lists](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 11: [Implement a Queue using two Stacks](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 12: [Implement a Queue using two Stacks](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 13: [Implement a Queue using two Stacks](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/linked-list/README.md)
+- Code Challenge 15: [Binary Tree and BST Implementation](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/tree/README.md)
+- Code Challenge 16: [Find the Maximum Value in a Binary Tree](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/tree/README.md)
+- Code Challenge 17: [Breadth-first Traversal](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/tree/README.md)
+- Code Challenge 35: [Implement a Graph](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/graph/README.md)
+- Code Challenge 36: [Extending the Graph Implementation](/home/micgreene/codefellows/301/data-structures-and-algorithms/javascript/code-challenges/graph/README.md)
