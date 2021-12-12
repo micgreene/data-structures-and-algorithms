@@ -5,6 +5,7 @@
 ## Code Challenges
 
 + Code Challenge 01: [Array Reverse](code_challenges/array_reverse/README.md)
++ Code Challenge 02: [Insert Shift Array](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/array_insert_shift/README.md)
 
 ### Folder and Challenge Setup
 
