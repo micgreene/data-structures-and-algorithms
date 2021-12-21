@@ -9,6 +9,7 @@
 + Code Challenge 03: [Binary Search](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/binary-search/README.md)
 + Code Challenge 04: [Interview 01](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/fib-seq/README.md)
 + Code Challenge 05: [Linked List](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/linked-list/README.md)
++ Code Challenge 06: [More Linked List Methods](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/linked-list/README.md)
 
 ### Folder and Challenge Setup
 
