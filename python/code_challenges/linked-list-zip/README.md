@@ -1,12 +1,16 @@
 # Code Challenge 08 - Zip two linked lists.
 
-### Challenge
+## Challenge
 
 + **Write a function called zip_lists**
   + Arguments: 2 linked lists
   + Return: New Linked List, zipped as noted below
 + Zip the two linked lists together into one so that the nodes alternate between the two lists
 + Return a reference to the the zipped list
+
+### Whiteboard Process
+
+![Whiteboard](code_challenge_08.jpg)
 
 ### Approach & Efficiency
 
@@ -16,4 +20,6 @@
 + I kept iterating through a few different ways to solve the problem until Isaiah figured out what I thought would be the simplest answer.
 + Finally, I created exceptions for values that are out of the range of our linked list.
 
+### Collaborated With
 
++ **Isaiah Burkes**
