@@ -37,13 +37,7 @@
 + I then built the code for each function based on the logic I identified in their visulizations.
 + Finally, I tested functionlity and syntax in my final code.
 
-## Code Challenge 06 - Extend a Linked List to Allow Various Insertion Methods.
-
-+ **Node**
-  + Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
-+ **Linked List**
-  + Create a Linked List class, include a head property.
-  + Upon instantiation, an empty Linked List should be created.
+## Code Challenge 06 - Extend a Linked List to Allow Various Insertion Methods
 
 ### Challenge
 
@@ -64,3 +58,19 @@
 + I then built the code for each function based on the test requirements.
 + I kept iterating through the functions until all test suites had passed.
 + Finally, I created exceptions for functions that are out of the range of our list index.
+
+## Code Challenge 07 - Extend a Linked List with Kth from End Method
+
+### Challenge
+
++ **kth from end**
+  + argument: a number, k, as a parameter.
+  + Return the node’s value that is k places from the tail of the linked list..
+
+### Approach & Efficiency
+
++ I used a whiteboard visual for this challenge.
++ I started by drawing a list and looking at how you would find a certain position from the end.
++ I then thought about what that would look like in code.
++ I kept iterating through a few different ways to solve the problem until figured out what I thought would be the simplest answer.
++ Finally, I created exceptions for values that are out of the range of our linked list.
