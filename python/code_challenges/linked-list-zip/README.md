@@ -8,6 +8,10 @@
 + Zip the two linked lists together into one so that the nodes alternate between the two lists
 + Return a reference to the the zipped list
 
+### WHiteboard Process
+
+![Whiteboard]('/home/micgreene/codefellows/301/data-structures-and-algorithms/python/code_challenges/linked-list-zip/code_challenge_08.jpg')
+
 ### Approach & Efficiency
 
 + I used a whiteboard visual for this challenge.
