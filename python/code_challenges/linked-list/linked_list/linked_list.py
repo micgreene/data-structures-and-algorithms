@@ -111,9 +111,15 @@ class Linked_List:
 
     def includes(self, val):
         '''
+<<<<<<< HEAD
+        Determines whether or not the linked list contains a certain value
+        Input: self as instance, val as any value
+        Output: Bool
+=======
         Checks if a value is the present in the linked list, returns True or False.
         Input: self as reference, a search value
         Output: Boolean
+>>>>>>> 0ebef2e243ba349140ac968fbd4ceec5089ecdb6
         '''
         curr_node = self.head
 
@@ -146,3 +152,42 @@ class Linked_List:
             ret_string += f' -> NONE'
 
         return ret_string
+
+    def kthfromend(self, k):
+        '''
+        Returns the value of the node the kth position from the end of the list
+        Input: self as instance, k as a number
+        Output: Any value of a Node
+        '''
+
+        curr_node = self.head
+
+        node_count = 0
+
+        if self.head == None:
+            return None
+        else:
+            while(curr_node != None):
+                node_count = node_count + 1
+                curr_node = curr_node.next
+
+        curr_node = self.head
+
+        node_count = node_count - k
+        temp_count = 0
+
+        if node_count <= 0:
+            raise ValueError('Selected number out of list index!')
+
+        else:
+            while curr_node:
+                temp_count = temp_count + 1
+
+                if temp_count == node_count:
+                    return curr_node.value
+                else:
+                    curr_node = curr_node.next
+
+
+
+

@@ -63,6 +63,61 @@ def test_to_string():
     expected = '{ 7 } -> { 4 } -> { 5 } -> NONE'
     assert actual == expected
 
+<<<<<<< HEAD
+def test_k_greater_than_list_len():
+    with pytest.raises(ValueError):
+        test_list = Linked_List()
+        test_list.insert(5)
+        test_list.insert(4)
+        test_list.insert(7)
+        actual = test_list.kthfromend(4)
+
+
+def test_k_equal_to_list_len():
+    with pytest.raises(ValueError):
+        test_list = Linked_List()
+        test_list.insert(5)
+        test_list.insert(4)
+        test_list.insert(7)
+        actual = test_list.kthfromend(3)
+
+# “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+def test_k_not_positive():
+    test_list = Linked_List()
+    test_list.insert(5)
+    test_list.insert(4)
+    test_list.insert(7)
+    test_list.insert(11)
+    test_list.insert(15)
+    actual = test_list.kthfromend(3)
+    expected = 11
+    assert actual == expected
+
+def test_list_is_len_of_one():
+    test_list = Linked_List()
+    test_list.insert(5)
+    actual = test_list.kthfromend(0)
+    expected = 5
+    assert actual == expected
+
+def test_k_happy_path():
+    test_list = Linked_List()
+    test_list.insert(5)
+    test_list.insert(4)
+    test_list.insert(7)
+    test_list.insert(11)
+    test_list.insert(15)
+    test_list.insert(18)
+    test_list.insert(21)
+    test_list.insert(25)
+    test_list.insert(28)
+    test_list.insert(32)
+    test_list.insert(39)
+    actual = test_list.kthfromend(5)
+    expected = 18
+    assert actual == expected
+=======
 '''
 Can successfully insert a node after the last node of the linked list
 '''
@@ -133,3 +188,4 @@ def test_insert_out_of_range():
         test_list.insert_after(9, 9)
 
 
+>>>>>>> 0ebef2e243ba349140ac968fbd4ceec5089ecdb6
