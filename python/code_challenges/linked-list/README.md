@@ -53,7 +53,7 @@
 
 ## Whiteboard Process
 
-![Whiteboard](code_challenge_06.jpg)
+![Whiteboard](code_challenge_ 06.jpg)
 
 ### Approach & Efficiency
 
