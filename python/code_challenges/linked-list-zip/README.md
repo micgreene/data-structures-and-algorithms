@@ -1,6 +1,6 @@
 # Code Challenge 08 - Zip two linked lists.
 
-### Challenge
+## Challenge
 
 + **Write a function called zip_lists**
   + Arguments: 2 linked lists
@@ -8,9 +8,9 @@
 + Zip the two linked lists together into one so that the nodes alternate between the two lists
 + Return a reference to the the zipped list
 
-### WHiteboard Process
+### Whiteboard Process
 
-![Whiteboard]('/home/micgreene/codefellows/301/data-structures-and-algorithms/python/code_challenges/linked-list-zip/code_challenge_08.jpg')
+![Whiteboard](code_challenge_08.jpg)
 
 ### Approach & Efficiency
 
@@ -20,4 +20,6 @@
 + I kept iterating through a few different ways to solve the problem until Isaiah figured out what I thought would be the simplest answer.
 + Finally, I created exceptions for values that are out of the range of our linked list.
 
+### Collaborated With
 
++ **Isaiah Burkes**
