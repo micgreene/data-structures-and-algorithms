@@ -49,11 +49,77 @@ class Linked_List:
             self.head = node
             self.head.next = temp_head
 
+    def insert_before(self, new_Val, search_Val):
+        '''
+        Inserts a new node at the position prior to that of the search value in the linked list.
+        Input: self as instance, new_Val as any value, search_Val as a value already in the linked list
+        Output: None
+        '''
+        curr_Node = self.head
+        prev_Node = Node(None)
+        input_node = Node(new_Val)
+
+        try:
+            if self.head == None:
+                self.head = input_node
+            else:
+                while curr_Node.next:
+                    if curr_Node.value == search_Val:
+                        if prev_Node.value == None:
+                            self.head = input_node
+                            self.head.next = curr_Node
+                            return
+                        else:
+                            prev_Node.next = input_node
+                            input_node.next = curr_Node
+                            return
+
+                    prev_Node = curr_Node
+                    curr_Node = curr_Node.next
+                raise ValueError
+
+        except ValueError:
+                    print('The search value cannot be found in this linked list!')
+
+    def insert_after(self, new_Val, search_Val):
+        '''
+        Inserts a new node at the position after that of the search value in the linked list.
+        Input: self as instance, new_Val as any value, search_Val as a value already in the linked list
+        Output: None
+        '''
+        curr_Node = self.head
+        input_node = Node(new_Val)
+        try:
+            if self.head == None:
+                self.head = input_node
+            elif curr_Node.next == None:
+                curr_Node.next = input_node
+            else:
+                while curr_Node.next:
+                    if curr_Node.value == search_Val:
+                        input_node.next = curr_Node.next
+                        curr_Node.next = input_node
+                    curr_Node = curr_Node.next
+                if curr_Node.value == search_Val:
+                    curr_Node.next = input_node
+                else:
+                    raise ValueError
+
+        except ValueError:
+                    print('The search value cannot be found in this linked list!')
+
+
     def includes(self, val):
         '''
+<<<<<<< HEAD
         Determines whether or not the linked list contains a certain value
         Input: self as instance, val as any value
         Output: Bool
+=======
+        Checks if a value is the present in the linked list, returns True or False.
+        Input: self as reference, a search value
+        Output: Boolean
+>>>>>>> 0ebef2e243ba349140ac968fbd4ceec5089ecdb6
         '''
         curr_node = self.head
 

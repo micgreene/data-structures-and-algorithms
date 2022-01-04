@@ -63,6 +63,7 @@ def test_to_string():
     expected = '{ 7 } -> { 4 } -> { 5 } -> NONE'
     assert actual == expected
 
+<<<<<<< HEAD
 def test_k_greater_than_list_len():
     with pytest.raises(ValueError):
         test_list = Linked_List()
@@ -116,3 +117,75 @@ def test_k_happy_path():
     actual = test_list.kthfromend(5)
     expected = 18
     assert actual == expected
+=======
+'''
+Can successfully insert a node after the last node of the linked list
+'''
+
+def test_append():
+    test_list = Linked_List()
+    test_list.append(5)
+    actual = test_list.head.value
+    expected = 5
+    assert actual == expected
+
+def test_multiple_append():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+    actual = test_list.to_string()
+    expected = '{ 5 } -> { 4 } -> { 7 } -> NONE'
+    assert actual == expected
+
+def test_insert_before():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+    test_list.insert_before(9, 4)
+    actual = test_list.to_string()
+    expected = '{ 5 } -> { 9 } -> { 4 } -> { 7 } -> NONE'
+    assert actual == expected
+
+def test_insert_before_head():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+    test_list.insert_before(9, 5)
+    actual = test_list.to_string()
+    expected = '{ 9 } -> { 5 } -> { 4 } -> { 7 } -> NONE'
+    assert actual == expected
+
+def test_insert_after():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+    test_list.insert_after(9, 4)
+    actual = test_list.to_string()
+    expected = '{ 5 } -> { 4 } -> { 9 } -> { 7 } -> NONE'
+    assert actual == expected
+
+def test_insert_after_tail():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+    test_list.insert_after(9, 7)
+    actual = test_list.to_string()
+    expected = '{ 5 } -> { 4 } -> { 7 } -> { 9 } -> NONE'
+    assert actual == expected
+
+def test_insert_out_of_range():
+    test_list = Linked_List()
+    test_list.append(5)
+    test_list.append(4)
+    test_list.append(7)
+
+    with pytest.raises(ValueError):
+        test_list.insert_after(9, 9)
+
+
+>>>>>>> 0ebef2e243ba349140ac968fbd4ceec5089ecdb6
