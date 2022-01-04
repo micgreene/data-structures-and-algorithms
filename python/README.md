@@ -8,7 +8,7 @@
 + Code Challenge 02: [Insert Shift Array](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/array_insert_shift/README.md)
 + Code Challenge 03: [Binary Search](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/binary-search/README.md)
 + Code Challenge 04: [Interview 01](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/fib-seq/README.md)
-+ Code Challenge 05: [Linked List](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/linked-list/README.md)
++ Code Challenges 05 - 07: [Linked List](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/linked-list/README.md)
 
 ### Folder and Challenge Setup
 
