@@ -111,15 +111,9 @@ class Linked_List:
 
     def includes(self, val):
         '''
-<<<<<<< HEAD
         Determines whether or not the linked list contains a certain value
         Input: self as instance, val as any value
         Output: Bool
-=======
-        Checks if a value is the present in the linked list, returns True or False.
-        Input: self as reference, a search value
-        Output: Boolean
->>>>>>> 0ebef2e243ba349140ac968fbd4ceec5089ecdb6
         '''
         curr_node = self.head
 

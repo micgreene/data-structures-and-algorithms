@@ -93,7 +93,7 @@ class LinkedList {
 
   //input: any given number
   //output: none
-  //adds a new node with that value to the 'head' of the list
+  //returns the value of the node the kth position from the end of the list
   kthfromend(searchIndx) {
     let currNode = this.head;
     let nodeCount = 0;
@@ -131,7 +131,7 @@ class LinkedList {
     }
   }
 
-  
+
 
   //input: any given value
   //output: a boolean result
