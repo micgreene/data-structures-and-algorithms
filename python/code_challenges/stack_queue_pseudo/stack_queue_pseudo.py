@@ -39,3 +39,22 @@ class PseudoQueue():
                 curr_node = curr_node.next
 
         return ret_val
+
+    def peek(self):
+        '''
+        Returns the value of the node located at the top of the storage_stack. Should raise exception when called on empty stack.
+        input: None
+        output: Value of top node of storage_stack
+        '''
+        return self.storage_stack.peek()
+
+    def is_empty(self):
+        '''
+        Returns a boolean determing whether or not the storage stack is empty.
+        input: None
+        output: boolean
+        '''
+        if self.storage_stack.top == None:
+            return True
+        else:
+            return False
