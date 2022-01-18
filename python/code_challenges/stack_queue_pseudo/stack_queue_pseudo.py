@@ -1,25 +1,41 @@
-from stack_and_queue.stack import Stack
+from stack import Stack
 
 class PseudoQueue():
-    __init__():
-        storage_stack = Stack()
-        overfl_stack = Stack()
+    '''
+    A class simulating the functionality of a Queue, but using two stacks as the means of internal storage.
+    __init__ values: None
+    '''
+    def __init__(self):
+        self.storage_stack = Stack()
+        self.overfl_stack = Stack()
 
     def enqueue(self, val):
-        storage_stack.push(val)
+        '''
+        Stores a new value in the storage_stack.
+        Input: self as instance, val as any value
+        Output: None
+        '''
+        self.storage_stack.push(val)
 
-    def dequeue():
-        if storage_stack.top == None:
+    def dequeue(self):
+        '''
+        Removes a value from the storage_stack in a First-in,First-out method using a second stack to store temporary values.
+        Input: None
+        Output: Value of removed node
+        '''
+        if self.storage_stack.top == None:
             raise Exception('Empty Stack')
         else:
-            curr_node = storage_stack.top
+            curr_node = self.storage_stack.top
             while curr_node.next != None:
-                overfl_stack.push(storage_stack.pop())
+                self.overfl_stack.push(self.storage_stack.pop())
                 curr_node = curr_node.next
 
-            storage_stack.pop()
-            curr_node = overfl_stack.top()
+            ret_val = self.storage_stack.pop()
+            curr_node = self.overfl_stack.top
 
             while curr_node != None:
-                storage_stack.push(overfl_stack.pop())
+                self.storage_stack.push(self.overfl_stack.pop())
                 curr_node = curr_node.next
+
+        return ret_val
