@@ -15,9 +15,9 @@ class Queue {
     this.storage.push(node.value);
     if (this.storage.length === 1) {
       this.front = node;
-      this.rear = node;
+      this.back = node;
     } else{
-      this.rear = node;
+      this.back = node;
     }
   }
 
@@ -32,12 +32,12 @@ class Queue {
     //if we removed the last item, reset all properties to null
     if (this.storage.length < 1) {
       this.front = null;
-      this.rear = null;
+      this.back = null;
     }
-    //if not, then we'll set the front and rear to their actual positions in the array
+    //if not, then we'll set the front and back to their actual positions in the array
     else {
       this.front = this.storage[0];
-      this.rear = this.storage[this.storage.length - 1];
+      this.back = this.storage[this.storage.length - 1];
     }
     return node;
   }
