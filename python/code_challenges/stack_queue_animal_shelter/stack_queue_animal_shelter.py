@@ -1,7 +1,7 @@
 from stack import Stack
 from animal import Animal
 
-class AnimalShelter ():
+class AnimalShelter():
     '''
     A class simulating the functionality of an animal shelter, storing 'animal' objects in a First In, First Out format. Animal objects should only be a 'cat' or a 'dog'.
     Attributes:
@@ -24,6 +24,7 @@ class AnimalShelter ():
         Input: self as instance, name as a string, species as a string
         Output: None
         '''
+        species = species.lower()
         new_animal = Animal(name, species)
         self.storage_stack.push(new_animal)
 
@@ -52,6 +53,7 @@ class AnimalShelter ():
 
             while curr_node != None:
                 if pref == None and ret_val == None:
+
                     curr_node = curr_node.next
                     ret_val = self.overfl_stack.pop()
                     continue
@@ -62,6 +64,7 @@ class AnimalShelter ():
                         self.overfl_stack.pop()
                         continue
                     elif pref == 'cat' and curr_node.value.species == 'cat':
+
                         ret_val = curr_node.value
                         curr_node = curr_node.next
                         self.overfl_stack.pop()
@@ -70,4 +73,4 @@ class AnimalShelter ():
                 self.storage_stack.push(self.overfl_stack.pop())
                 curr_node = curr_node.next
 
-        return ret_val
+            return ret_val
