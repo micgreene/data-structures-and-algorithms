@@ -13,7 +13,7 @@
 
 ### Whiteboard
 
-![Whiteboard](stack_queue_animal_shelter.jpg)
+![Whiteboard](stack_queue_bracket.jpg)
 
 ### Approach & Efficiency
 
