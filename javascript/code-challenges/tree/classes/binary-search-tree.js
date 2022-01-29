@@ -1,6 +1,5 @@
 'use strict';
 
-const { root } = require('cheerio');
 const BinaryTree = require('./binary-tree.js');
 const Node = require('./node.js');
 
@@ -40,7 +39,7 @@ class BinarySearchTree extends BinaryTree {
     let containsNum = null;
     let _walk = (node) => {
       currentNode = node;
-      
+
       if (currentNode === null) {
         containsNum = false;
         return false;
@@ -50,7 +49,7 @@ class BinarySearchTree extends BinaryTree {
         containsNum = true;
         return true;
       }
-      
+
       let leftNodes = _walk(node.left);
 
       if (leftNodes === true) {
