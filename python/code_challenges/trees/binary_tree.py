@@ -1,5 +1,5 @@
-from tree_node import Node
-from queue import Queue
+from code_challenges.trees.tree_node import Node
+from code_challenges.trees.queue import Queue
 
 class BinaryTree():
     def __init__(self, root=None):
@@ -12,32 +12,61 @@ class BinaryTree():
         return f'BinaryTree(root: {self.root.value})'
 
     def pre_order(self):
+        '''
+        Returns a pre-ordered list of the tree's node values.
+
+        Input: None
+        Output: list
+        '''
         if self.root == None:
             raise Exception('Empty Tree!')
 
         nodes = []
+        def walk(node):
+            nodes.append(node.value)
+            if node.left: walk(node.left)
+            if node.right: walk(node.right)
 
-        _walk = def (node):
-            nodes.push(node.value)
-            if node.left: _walk(node.left)
-            if node.right: _walk(node.right)
-        _walk(this.root)
+        walk(self.root)
 
         return nodes
 
-    def in_order(self, node):
-        return
+    def in_order(self):
+        '''
+        Returns a in-ordered list of the tree's node values.
 
-    def post_order(self, node):
-        return
+        Input: None
+        Output: list
+        '''
+        if self.root == None:
+            raise Exception('Empty Tree!')
 
-tree = BinaryTree(5)
-node6 = Node(6)
-node7 = Node(7)
-tree.root.left = node6
-tree.root.right = node7
-tree.pre_order()
+        nodes = []
+        def walk(node):
+            if node.left: walk(node.left)
+            nodes.append(node.value)
+            if node.right: walk(node.right)
 
+        walk(self.root)
 
+        return nodes
 
+    def post_order(self):
+        '''
+        Returns a post-ordered list of the tree's node values.
 
+        Input: None
+        Output: list
+        '''
+        if self.root == None:
+            raise Exception('Empty Tree!')
+
+        nodes = []
+        def walk(node):
+            if node.left: walk(node.left)
+            if node.right: walk(node.right)
+            nodes.append(node.value)
+
+        walk(self.root)
+
+        return nodes

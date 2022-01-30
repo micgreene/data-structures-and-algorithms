@@ -1,4 +1,4 @@
-from queue_node import Node
+from code_challenges.trees.queue_node import Node
 
 class Queue:
     def __init__(self, front = None, back = None):
