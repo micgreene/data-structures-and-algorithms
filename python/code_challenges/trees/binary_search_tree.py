@@ -48,7 +48,6 @@ class BinarySearch(BinaryTree):
 
         def walk(node,contained):
             if node.value == val:
-                print(node.value)
                 contained["contained" ] = True
 
             if node.left: walk(node.left,contained)

@@ -94,3 +94,47 @@ def test_contains():
     actual = bst.contains(11)
     expected = False
     assert actual == expected
+
+def test_max():
+    bst = BinarySearch(7)
+    bst.add(5)
+    bst.add(9)
+    bst.add(4)
+    bst.add(6)
+    bst.add(8)
+    bst.add(10)
+
+    actual = bst.max()
+    expected = 10
+    assert actual == expected
+
+    bst = BinarySearch(10)
+    bst.add(5)
+    bst.add(9)
+    bst.add(4)
+    bst.add(6)
+    bst.add(8)
+    bst.add(7)
+
+    actual = bst.max()
+    expected = 10
+    assert actual == expected
+
+def test_max_empty_tree():
+    bst = BinarySearch()
+
+    with pytest.raises(Exception):
+        actual = bst.max()
+
+def test_max_negatives():
+    bst = BinarySearch(-7)
+    bst.add(-5)
+    bst.add(-9)
+    bst.add(-4)
+    bst.add(-6)
+    bst.add(-8)
+    bst.add(-10)
+
+    actual = bst.max()
+    expected = -4
+    assert actual == expected

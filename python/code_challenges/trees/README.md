@@ -1,6 +1,31 @@
-# Code Challenge 15 - Binary Tree and BST Implementation
+# Code Challenge 16 - Find the Maximum Value in a Binary Tree
 
 ## Challenge
+
+### Write the following method for the Binary Tree class
+
++ find maximum value
+  + Arguments: none
+  + Returns: number
+  + Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+### Whiteboard
+
+![Whiteboard](code_challenge_16.jpg)
+
+### Approach & Efficiency
+
++ I started by creating a whiteboard visual to clarify what I was trying to do.
++ Essentially, I want to look at every spot in the tree in no particular order and find the largest value.
++ To do this, I thought it would be good to process the nodes from the tree one by one somehow.
++ For this, I figured a queue would work well because of its FIFO functionality.
++ Once the root is inserted into the queue, it is dequeued then its children enqueued in order.
++ The value of the dequeued node is compared against the return node.
++ This process is repeated for each node in the queue until complete.
+
+## Code Challenge 15 - Binary Tree and BST Implementation
+
+### Challenge
 
 ### Node
 

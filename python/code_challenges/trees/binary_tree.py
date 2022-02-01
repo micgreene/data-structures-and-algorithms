@@ -70,3 +70,29 @@ class BinaryTree():
         walk(self.root)
 
         return nodes
+
+    def max(self):
+        '''
+        Returns the largest value in the tree.
+
+        Input: None
+        Output: Number
+        '''
+        if self.root == None:
+            raise Exception('Tree is empty!')
+
+        max_value = self.root.value
+        node_queue = Queue()
+        node_queue.enqueue(self.root)
+
+        while node_queue.is_empty() == False:
+            if node_queue.front.value.left:
+                node_queue.enqueue(node_queue.front.value.left)
+            if node_queue.front.value.right:
+                node_queue.enqueue(node_queue.front.value.right)
+
+            temp_node = node_queue.dequeue()
+            if temp_node.value > max_value:
+                max_value = temp_node.value
+
+        return max_value
