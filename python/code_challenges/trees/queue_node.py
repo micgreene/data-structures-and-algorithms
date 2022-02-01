@@ -2,8 +2,10 @@ class Node():
     '''
     Node class for a queue.
     '''
-    def __init__(self, value=None, next=None):
+    def __init__(self, value=None, left=None, right=None, next=None):
         self.value = value
+        self.left = left
+        self.right = right
         self.next = next
 
     def __str__(self):
