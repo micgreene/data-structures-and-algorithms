@@ -1,5 +1,5 @@
-from code_challenges.trees.binary_tree import BinaryTree
-from code_challenges.trees.tree_node import Node
+from binary_tree import BinaryTree
+from tree_node import Node
 
 class BinarySearch(BinaryTree):
 
@@ -13,6 +13,9 @@ class BinarySearch(BinaryTree):
         Input: val as an int
         Output: None
         '''
+        root=5
+
+
         node = Node(val)
 
         if self.root == None:
@@ -26,6 +29,7 @@ class BinarySearch(BinaryTree):
             trackingNode = currentNode
             if val < currentNode.value:
                 currentNode = currentNode.left
+
             else:
                 currentNode = currentNode.right
 
