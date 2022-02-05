@@ -16,6 +16,7 @@
 + Code Challenges 13: [Multi-bracket Validation](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/stack_queue_bracket/README.md)
 + Code Challenges 15: [Binary Tree and BST Implementation](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/trees/README.md)
 + Code Challenges 16: [Maximum Value in a Binary Tree](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/trees/README.md)
++ Code Challenges 17: [Traverse Breadth-First THrough a Binary Tree]()
 
 ### Folder and Challenge Setup
 

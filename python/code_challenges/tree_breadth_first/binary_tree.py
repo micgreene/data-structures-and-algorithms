@@ -1,5 +1,5 @@
-from code_challenges.trees.tree_node import Node
-from code_challenges.trees.queue import Queue
+from code_challenges.tree_breadth_first.tree_node import Node
+from code_challenges.tree_breadth_first.queue import Queue
 
 class BinaryTree():
     def __init__(self, root=None):
@@ -7,6 +7,7 @@ class BinaryTree():
             self.root = Node(root)
         else:
             self.root = None
+
 
     def __str__(self):
         return f'A Binary Tree, its root has a value of {self.root.value}'
