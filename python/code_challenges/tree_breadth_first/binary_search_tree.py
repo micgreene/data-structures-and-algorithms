@@ -1,5 +1,5 @@
-from binary_tree import BinaryTree
-from tree_node import Node
+from code_challenges.tree_breadth_first.binary_tree import BinaryTree
+from code_challenges.tree_breadth_first.tree_node import Node
 
 class BinarySearch(BinaryTree):
 
