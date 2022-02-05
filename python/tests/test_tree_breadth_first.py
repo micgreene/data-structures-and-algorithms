@@ -3,5 +3,5 @@ import pytest
 
 
 def test_empty_tree():
-
+    print('dod')
     pass
