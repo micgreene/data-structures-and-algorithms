@@ -1,5 +1,7 @@
 # Insertion Sort
 
+***Author: Michael Greene**
+
 ## Introduction
 
 **In this article we will review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample list.**
