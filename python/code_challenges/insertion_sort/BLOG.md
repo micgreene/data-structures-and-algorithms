@@ -10,15 +10,15 @@
 
 ## Pseudocode
 
-**Line #**
-1- `InsertionSort(int[] arr)`
-2-  `FOR i = 1 to arr.length`
-3-    `int j <-- i - 1`
-4-    `int temp <-- arr[i]`
-5-    `WHILE j >= 0 AND temp < arr[j]`
-6-      `arr[j + 1] <-- arr[j]`
-7-      `j <-- j - 1`
-8-    `arr[j + 1] <-- temp`
+**Line #**<br />
+1- `InsertionSort(int[] arr)`<br />
+2-  `FOR i = 1 to arr.length`<br />
+3-    `int j <-- i - 1`<br />
+4-    `int temp <-- arr[i]`<br />
+5-    `WHILE j >= 0 AND temp < arr[j]`<br />
+6-      `arr[j + 1] <-- arr[j]`<br />
+7-      `j <-- j - 1`<br />
+8-    `arr[j + 1] <-- temp`<br />
 
 ### Algorithm
 
