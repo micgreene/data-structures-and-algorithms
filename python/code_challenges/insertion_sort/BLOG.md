@@ -1,6 +1,6 @@
 # Insertion Sort
 
-***Author: Michael Greene**
+**Author: Michael Greene**
 
 ## Introduction
 
