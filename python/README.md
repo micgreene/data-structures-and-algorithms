@@ -17,7 +17,7 @@
 + Code Challenges 15: [Binary Tree and BST Implementation](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/trees/README.md)
 + Code Challenges 16: [Maximum Value in a Binary Tree](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/trees/README.md)
 + Code Challenges 17: [Traverse Breadth-First Through a Binary Tree](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/tree_breadth_first/README.md)
-+ Code Challenges 26: [Insertion Sort](https://)
++ Code Challenges 26: [Insertion Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/insertion_sort/README.md)
 
 ### Folder and Challenge Setup
 
