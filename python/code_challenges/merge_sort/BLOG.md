@@ -9,7 +9,7 @@
 **I will then show the step-by-step output after each iteration.**
 
 ## Pseudocode
-
+[8,4,23,42,16,15]
 **Line #**
 1-   `ALGORITHM Mergesort(arr)`
 2-       `DECLARE n <-- arr.length`
@@ -71,6 +71,27 @@
   + Finally the two halves are sorted then merged back together:
     + Line 12, `Merge(left, right, arr)`, is calling a separate function which will now sort and remerge the lists.
       + **Note:** What this will eventually do is divide the original list up into several lists of just 2 integers each. Each list will be split into a left and right list by themselves, then sorted back into the main list. This will keep happening until all indexes have been compared to eachother.
+
+1. At this point, let's follow the recursive steps happening in lines 8-10:
+
++ 1) On line 8, Mergesort() is called using the left list we created on line 5.
+  + `mergeSort([8,4,23])`
++ This will repeast lines 2 - 8 using this new list. I will keep repeating this process, tracking the new lists created as I go.
+  + **Note:** Remember that mergeSort() requires a list with a length greater than 1!
+  + Iteration #
+    + 1 - left = [8,4,23]
+      + 1 - right = [42,16,15]
+    + 2 - left = [8]
+      + 2 - right = [4,23]
+  + At this point, the left list([8]) only is 1 index in length, which ceases recursion to line 8.
+  + On line 10, Mergesort() is called using the right list we created on line 6. Since we are still in recursion we use the list above.
+    + Let's follow the lists created each iteration to keep better track of what each step looks like.
+    + First iteration: `mergeSort([42,16,15])`
+      + 1 - left = [42]
+        + 1 - right = [16,15]
+          + 1a - left = [16]
+            + 1a - right = [15]
++
 
 1. Line 13, `Merge(left, right, arr)`, is telling us that this is a function.
 
