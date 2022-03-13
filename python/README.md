@@ -20,6 +20,7 @@
 + Code Challenges 26: [Insertion Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/insertion_sort/README.md)
 + Code Challenges 27: [Merge Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/merge_sort/README.md)
 + Code Challenges 28: [Quick Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/quick_sort/README.md)
++ Code Challenges 30: [Hash Tables](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hash_table/README.md)
 
 ### Folder and Challenge Setup
 
