@@ -27,17 +27,17 @@ class Hashtable:
         #1-hash the key
         hash = self.hash(key)
 
-        #2-if dictionary is empty then raise exception
+        #2-if dictionary is empty then return None
         if self.bucket[hash] == None:
-            raise Exception('Value not found')
+            return None
 
         #3-traverse through dictionary until matching key is found and return value
         for idx in self.bucket[hash]:
             if idx == key:
                 return self.bucket[hash][key]
 
-        #4 - if no key is present in the hash map raise an exception
-        raise Exception('Value not found')
+        #4 - if no key is present in the hash map return None
+        return None
 
     def contains(self, key):
         '''
@@ -103,14 +103,3 @@ class Hashtable:
                 ret_list += temp
 
         return ret_list
-
-has = Hashtable()
-
-has.set('apple1',7)
-has.set('apple',9)
-has.set('pear',5)
-has.set('grape',3)
-has.set('orange',4)
-print(has.get('apple2'))
-
-print(has.keys())
