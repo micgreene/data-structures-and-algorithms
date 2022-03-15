@@ -37,5 +37,3 @@ def no_punc(word):
 
     word = word.lower()
     return word
-
-print(repeated_word('Land a big one, jerk one.'))
