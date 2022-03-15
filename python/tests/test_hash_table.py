@@ -1,9 +1,7 @@
 from code_challenges.hash_table.hash_table import Hashtable
 
 import pytest
-'''
-Successfully hash a key to an in-range value
-'''
+
 def test_hash_table():
     ht = Hashtable()
     ht.set('apple', 8)
