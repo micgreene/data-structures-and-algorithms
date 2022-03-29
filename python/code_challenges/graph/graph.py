@@ -8,6 +8,9 @@ class Graph():
     def __str__(self):
         return (f'a graph defined as:\n{self.adj_list}')
 
+    def __repr__(self):
+        return (f'Graph({self.adj_list})')
+
     def add_node(self, value):
         new_vert = Vertex(value)
 

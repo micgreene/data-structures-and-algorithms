@@ -2,44 +2,81 @@ from code_challenges.graph.graph import Graph
 
 import pytest
 
-'''
-Node can be successfully added to the graph
-An edge can be successfully added to the graph
-A collection of all nodes can be properly retrieved from the graph
-All appropriate neighbors can be retrieved from the graph
-Neighbors are returned with the weight between nodes included
-The proper size is returned, representing the number of nodes in the graph
-A graph with only one node and edge can be properly returned
-An empty graph properly returns null
-'''
 def test_add_node():
     test_graph = Graph()
     node1 = test_graph.add_node(1)
 
-    actual = test_graph
+    actual = str(test_graph)
     expected = 'a graph defined as:\n{Vertex(1): []}'
+    assert actual == expected
 
+def test_add_edge():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    test_graph.add_edge(node1, node2, 5)
 
+    actual = str(test_graph.adj_list[node1][0])
+    expected = f'an edge between a node vertex with a value of {1} and a node vertex with a value of {2}, with a weight of {5}'
+    assert actual == expected
 
-# test_graph = Graph()
+def test_get_nodes():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
 
-# node1 = test_graph.add_node(1)
-# node2 = test_graph.add_node(2)
-# node3 = test_graph.add_node(3)
-# node4 = test_graph.add_node(4)
-# node5 = test_graph.add_node(5)
+    actual = str(test_graph.get_nodes())
+    expected = f'[Vertex(1), Vertex(2)]'
+    assert actual == expected
 
-# test_graph.add_edge(node1, node2,1)
-# test_graph.add_edge(node2, node3,2)
-# test_graph.add_edge(node2, node5,6)
-# test_graph.add_edge(node3, node4,3)
-# test_graph.add_edge(node4, node5,4)
-# test_graph.add_edge(node5, node1,5)
+def test_get_neighbors():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
 
-# print(f'My graph:\n{test_graph}\n')
+    test_graph.add_edge(node1, node2, 1)
+    test_graph.add_edge(node2, node3, 2)
+    test_graph.add_edge(node3, node1, 3)
 
-# print(f'get_nodes(): {test_graph.get_nodes()}\n')
+    actual = str(test_graph.get_neighbors(node1))
+    expected = f'[Edge((Vertex(1), Vertex(2), 1))]'
+    assert actual == expected
 
-# print(f'get_neighbors(): {test_graph.get_neighbors(node2)}\n')
+    actual = str(test_graph.get_neighbors(node2))
+    expected = f'[Edge((Vertex(2), Vertex(3), 2))]'
+    assert actual == expected
 
-# print(f'size(): {test_graph.size()}')
+    actual = str(test_graph.get_neighbors(node3))
+    expected = f'[Edge((Vertex(3), Vertex(1), 3))]'
+    assert actual == expected
+
+def test_size():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    actual = test_graph.size()
+    expected = 3
+    assert actual == expected
+
+def test_one_node_one_edge():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    test_graph.add_edge(node1, None, 5)
+
+    actual = str(test_graph.adj_list[node1][0])
+    expected = f'an edge between a node vertex with a value of {1} and {None}, with a weight of {5}'
+    assert actual == expected
+
+    actual = str(test_graph)
+    expected = f'a graph defined as:\n{{Vertex(1): [Edge((Vertex(1), None, 5))]}}'
+    assert actual == expected
+
+def test_one_node_one_edge():
+    test_graph = Graph()
+
+    actual = str(test_graph)
+    expected = f'a graph defined as:\n{{}}'
+    assert actual == expected
