@@ -1,4 +1,7 @@
 class Edge():
+    '''
+    Class which tracks directed edges in a graph between two vertices, and their weight if one was given.
+    '''
     def __init__(self, start_vert, end_vert=None, weight=0):
         self.start_vert = start_vert
         self.end_vert =end_vert

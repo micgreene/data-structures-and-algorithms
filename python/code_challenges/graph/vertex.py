@@ -1,4 +1,7 @@
 class Vertex():
+    '''
+    This class acts as a single vertex in a graph, containing just a value.
+    '''
     def __init__(self, value=None):
         self.value = value
 
