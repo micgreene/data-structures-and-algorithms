@@ -1,6 +1,6 @@
-from vertex import Vertex
-from edge import Edge
-from queue import Queue
+from code_challenges.graph.vertex import Vertex
+from code_challenges.graph.edge import Edge
+from code_challenges.graph.queue import Queue
 
 class Graph():
     '''
@@ -41,7 +41,7 @@ class Graph():
             if end_vert in self.adj_list or end_vert is None:
                 self.adj_list[start_vert].append(new_edge)
             else:
-                #exceptions are raised if the given node cannot be found in the graph
+                # exceptions are raised if the given node cannot be found in the graph
                 raise Exception('ending vertex is not in graph!')
         else:
                 raise Exception('starting vertex is not in graph!')
@@ -72,19 +72,28 @@ class Graph():
         return ret_list
 
     def breadth_first(self, vert):
+        '''
+        Given a node, returns a collection of breadth-first ordered nodes that can be reached from the given node.
+        Input: Node
+        Output: List of Nodes
+        '''
         vert_queue = Queue()
         vert_queue.enqueue(vert)
         ret_list = []
         temp_adj_list = self.adj_list
 
+        #continues enqueuing nodes in the order you encounter them, while loop continues until queue is empty
         while vert_queue.is_empty() is not True:
             temp = vert_queue.dequeue()
 
+            # if the node is not in the adjacency list (or is None), we'll just return it in a list by itself
             if temp not in ret_list:
                 ret_list.append(temp)
 
             if temp in temp_adj_list:
+                # we create a clone adjency list (temp_adj_list) and use it to preserve original dat structure
                 while len(temp_adj_list[temp]) != 0:
+                    # takes the end_vert property from the edge to determine the node adjacency
                     added_vert = temp_adj_list[temp].pop(0).end_vert
                     vert_queue.enqueue(added_vert)
             else:
@@ -99,16 +108,3 @@ class Graph():
         Output: integer value of items in graph
         '''
         return len(self.adj_list)
-
-test_graph = Graph()
-
-node1 = test_graph.add_node(1)
-node2 = test_graph.add_node(2)
-node3 = test_graph.add_node(3)
-
-test_graph.add_edge(node1, node2, 1)
-test_graph.add_edge(node1, node3, 4)
-test_graph.add_edge(node2, node3, 2)
-test_graph.add_edge(node3, node1, 3)
-
-print(test_graph.breadth_first(node1))
