@@ -10,6 +10,10 @@
     + Return: A collection of nodes in the order they were visited.
     + Display the collection
 
+## Whiteboard Process
+
+![Whiteboard](breadth_first.jpg)
+
 ### Approach & Efficiency
 
 + I started by creating an image on a whiteboard of a graph.
