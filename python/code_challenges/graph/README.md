@@ -1,8 +1,31 @@
 # Graph Class
 
+## Implement Breadth-First Traversal
+
+### Challenge 2
+
++ Write the following method for the Graph class:
+  + **breadth_first**
+    + Arguments: Node
+    + Return: A collection of nodes in the order they were visited.
+    + Display the collection
+
+## Whiteboard Process
+
+![Whiteboard](breadth_first.jpg)
+
+### Approach & Efficiency
+
++ I started by creating an image on a whiteboard of a graph.
++ I used a queue data structure as it was helpful for breadth-first traversal in trees.
++ I reasoned in the same way as in a tree, we would enqueue the nodes as we discover them, thus ensuring we add the node as we discover them in order.
++ The challenge for working with graphs was the fact that, unlike in a tree, we may encounter the same node multiple times.
++ This meant we needed to check that we weren't trying to add the same nodes over and over again as we traverse.
++ After I figured out the necessary logic, the rest was simple.
+
 ## Implement a Graph
 
-### Challenge
+### Challenge 1
 
 + The graph should be represented as an adjacency list, and should include the following methods:
   + **add node**

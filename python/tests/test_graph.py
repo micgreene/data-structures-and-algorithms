@@ -80,3 +80,51 @@ def test_one_node_one_edge():
     actual = str(test_graph)
     expected = f'a graph defined as:\n{{}}'
     assert actual == expected
+
+def test_breadth_first():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    test_graph.add_edge(node1, node2, 1)
+    test_graph.add_edge(node2, node3, 2)
+    test_graph.add_edge(node3, node1, 3)
+
+    actual = str(test_graph.breadth_first(node1))
+    expected = f'[Vertex(1), Vertex(2), Vertex(3)]'
+    assert actual == expected
+
+def test_breadth_first_multiple_edges():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    test_graph.add_edge(node1, node2, 1)
+    test_graph.add_edge(node1, node3, 4)
+    test_graph.add_edge(node2, node3, 2)
+    test_graph.add_edge(node2, node1, 5)
+    test_graph.add_edge(node3, node1, 3)
+    test_graph.add_edge(node3, node2, 6)
+
+    actual = str(test_graph.breadth_first(node1))
+    expected = f'[Vertex(1), Vertex(2), Vertex(3)]'
+    assert actual == expected
+
+def test_breadth_first_disconnected():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    actual = str(test_graph.breadth_first(node1))
+    expected = f'[Vertex(1)]'
+    assert actual == expected
+
+def test_breadth_first_empty():
+    test_graph = Graph()
+
+    actual = str(test_graph.breadth_first(None))
+    expected = f'[None]'
+    assert actual == expected
