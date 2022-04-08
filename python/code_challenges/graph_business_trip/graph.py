@@ -23,7 +23,7 @@ class Graph():
         '''
         new_vert = Vertex(value)
 
-        self.adj_list[new_vert] = []
+        self.adj_list[new_vert.value] = []
 
         return new_vert
 
@@ -37,9 +37,9 @@ class Graph():
         '''
         new_edge = Edge(start_vert, end_vert, weight)
 
-        if start_vert in self.adj_list:
-            if end_vert in self.adj_list or end_vert is None:
-                self.adj_list[start_vert].append(new_edge)
+        if start_vert.value in self.adj_list:
+            if end_vert.value in self.adj_list or end_vert is None:
+                self.adj_list[start_vert.value].append(new_edge)
             else:
                 # exceptions are raised if the given node cannot be found in the graph
                 raise Exception('ending vertex is not in graph!')
@@ -66,7 +66,6 @@ class Graph():
         Output: a list of edges
         '''
         ret_list = []
-
         for edge in self.adj_list[vert]:
                 ret_list.append(edge)
         return ret_list

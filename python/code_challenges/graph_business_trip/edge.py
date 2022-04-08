@@ -4,7 +4,7 @@ class Edge():
     '''
     def __init__(self, start_vert, end_vert=None, weight=0):
         self.start_vert = start_vert
-        self.end_vert =end_vert
+        self.end_vert = end_vert
         self.weight = weight
 
     def __str__(self):
