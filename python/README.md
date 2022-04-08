@@ -21,11 +21,12 @@
 + Code Challenges 27: [Merge Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/merge_sort/README.md)
 + Code Challenges 28: [Quick Sort](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/quick_sort/README.md)
 + Code Challenges 30: [Hash Tables](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hash_table/README.md)
-+ Code Challenges 31: [First Repeated Word](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hashmap-repeated-word/README.md)
-+ Code Challenges 32: [Common Values in 2 Binary Trees](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/tree-intersection/README.md)
-+ Code Challenges 33: [Simplified LEFT JOIN for 2 Hashmaps](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hashmap-left-join/README.md)
-+ Code Challenges 35: [Implementation: Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/cc35-graph/README.md)
-+ Code Challenges 36: [Breadth-First Traversal in Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph-breadth-first-py/README.md)
++ Code Challenges 31: [First Repeated Word](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hashmap_repeated_word/README.md)
++ Code Challenges 32: [Common Values in 2 Binary Trees](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/tree_intersection/README.md)
++ Code Challenges 33: [Simplified LEFT JOIN for 2 Hashmaps](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/hashmap_left_join/README.md)
++ Code Challenges 35: [Implementation: Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph/README.md)
++ Code Challenges 36: [Breadth-First Traversal in Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph/README.md)
++ Code Challenges 37: [Graph Business Trip](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph_business_trip/README.md)
 
 ### Folder and Challenge Setup
 
