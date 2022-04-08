@@ -1,5 +1,5 @@
-from graph import Graph
-from vertex import Vertex
+from code_challenges.graph_business_trip.graph import Graph
+from code_challenges.graph_business_trip.vertex import Vertex
 
 def business_trip(graph_map, itinerary):
     ret_sum = 0

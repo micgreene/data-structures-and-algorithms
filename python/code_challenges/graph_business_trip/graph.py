@@ -1,6 +1,6 @@
-from vertex import Vertex
-from edge import Edge
-from queue import Queue
+from code_challenges.graph_business_trip.vertex import Vertex
+from code_challenges.graph_business_trip.edge import Edge
+from code_challenges.graph_business_trip.queue import Queue
 
 class Graph():
     '''
