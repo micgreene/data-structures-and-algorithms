@@ -1,8 +1,7 @@
-from vertex import Vertex
-from edge import Edge
-from queue import Queue
-from stack import Stack
-import copy
+from code_challenges.graph.vertex import Vertex
+from code_challenges.graph.edge import Edge
+from code_challenges.graph.queue import Queue
+from code_challenges.graph.stack import Stack
 
 class Graph():
     '''
@@ -105,7 +104,7 @@ class Graph():
 
     def depth_first(self, node):
         if node == None:
-            raise Exception('Empty Graph')
+            return [None]
         elif len(self.get_neighbors(node)) == 0:
             return [node]
 
