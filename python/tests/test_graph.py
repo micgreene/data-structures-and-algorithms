@@ -128,3 +128,60 @@ def test_breadth_first_empty():
     actual = str(test_graph.breadth_first(None))
     expected = f'[None]'
     assert actual == expected
+
+def test_depth_first():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    test_graph.add_edge(node1, node2, 1)
+    test_graph.add_edge(node2, node3, 2)
+    test_graph.add_edge(node3, node1, 3)
+
+    actual = str(test_graph.depth_first(node1))
+    expected = f'[Vertex(1), Vertex(2), Vertex(3)]'
+    assert actual == expected
+
+def test_depth_first_multiple_edges():
+    test_graph = Graph()
+
+    nodeA = test_graph.add_node('A')
+    nodeB = test_graph.add_node('B')
+    nodeC = test_graph.add_node('C')
+    nodeD = test_graph.add_node('D')
+    nodeE = test_graph.add_node('E')
+    nodeF = test_graph.add_node('F')
+    nodeG = test_graph.add_node('G')
+    nodeH = test_graph.add_node('H')
+
+    test_graph.add_edge(nodeA, nodeD, 1)
+    test_graph.add_edge(nodeA, nodeB, 2)
+    test_graph.add_edge(nodeB, nodeD, 3)
+    test_graph.add_edge(nodeB, nodeC, 4)
+    test_graph.add_edge(nodeC, nodeG, 5)
+    test_graph.add_edge(nodeD, nodeF, 6)
+    test_graph.add_edge(nodeD, nodeH, 7)
+    test_graph.add_edge(nodeD, nodeE, 8)
+    test_graph.add_edge(nodeF, nodeH, 9)
+
+    actual = str(test_graph.depth_first(nodeA))
+    expected = f'[Vertex(A), Vertex(B), Vertex(C), Vertex(G), Vertex(D), Vertex(E), Vertex(H), Vertex(F)]'
+    assert actual == expected
+
+def test_depth_first_disconnected():
+    test_graph = Graph()
+    node1 = test_graph.add_node(1)
+    node2 = test_graph.add_node(2)
+    node3 = test_graph.add_node(3)
+
+    actual = str(test_graph.depth_first(node1))
+    expected = f'[Vertex(1)]'
+    assert actual == expected
+
+def test_depth_first_empty():
+    test_graph = Graph()
+
+    actual = str(test_graph.depth_first(None))
+    expected = f'[None]'
+    assert actual == expected

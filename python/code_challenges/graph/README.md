@@ -1,5 +1,27 @@
 # Graph Class
 
+## Implement Depth-First Traversal
+
+### Challenge 3
+
++ Write the following method for the Graph class:
+  + **depth_first()**
+    + Arguments: Node (Starting point of search)
+    + Return: A collection of nodes in their pre-order depth-first traversal order
+
+## Whiteboard Process
+
+![Whiteboard](depth_first.jpg)
+
+### Approach & Efficiency
+
++ I started by creating an image on a whiteboard of a graph.
++ I used a stack data structure as it was helpful to ensure we traversed in a preorder fashion.
++ I reasoned in the same way as in a tree, we would pop the nodes from th e stack as we evaluate them, thus ensuring we always look at the last node pushed into the stack.
++ The challenge for working with graphs was the fact that, unlike in a tree, we may encounter the same node multiple times.
++ This meant we needed to check that we weren't trying to add the same nodes over and over again as we traverse.
++ This meant if we find a node already present in our return list, then we skip over our logic until we have encountered all unique nodes.
+
 ## Implement Breadth-First Traversal
 
 ### Challenge 2

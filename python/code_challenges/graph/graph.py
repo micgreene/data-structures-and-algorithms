@@ -1,6 +1,7 @@
 from code_challenges.graph.vertex import Vertex
 from code_challenges.graph.edge import Edge
 from code_challenges.graph.queue import Queue
+from code_challenges.graph.stack import Stack
 
 class Graph():
     '''
@@ -82,6 +83,7 @@ class Graph():
         ret_list = []
         temp_adj_list = self.adj_list
 
+
         #continues enqueuing nodes in the order you encounter them, while loop continues until queue is empty
         while vert_queue.is_empty() is not True:
             temp = vert_queue.dequeue()
@@ -90,14 +92,43 @@ class Graph():
             if temp not in ret_list:
                 ret_list.append(temp)
 
-            if temp in temp_adj_list:
-                # we create a clone adjency list (temp_adj_list) and use it to preserve original dat structure
-                while len(temp_adj_list[temp]) != 0:
-                    # takes the end_vert property from the edge to determine the node adjacency
-                    added_vert = temp_adj_list[temp].pop(0).end_vert
-                    vert_queue.enqueue(added_vert)
+                if temp in temp_adj_list:
+                    # we create a clone adjency list (temp_adj_list) and use it to preserve original dat structure
+                    temp_children = temp_adj_list[temp]
+                    for vert in temp_children:
+                        # takes the end_vert property from the edge to determine the node adjacency
+                        vert_queue.enqueue(vert.end_vert)
+                else:
+                    return ret_list
+        return ret_list
+
+    def depth_first(self, node):
+        '''
+        Given a node, returns a collection of depth-first pre-ordered nodes that can be reached from the given node.
+        Input: Node
+        Output: List of Nodes
+        '''
+        if node == None:
+            return [None]
+        elif len(self.get_neighbors(node)) == 0:
+            return [node]
+
+        ret_list = []
+        node_stack = Stack()
+
+        node_stack.push(node)
+
+        while node_stack.is_empty() is not True:
+            # pop last node off of stack, this ensures we stay in pre-ordered collection. We never look at the first encountered node in the list of children, always the last.
+            temp = node_stack.pop()
+            if temp in ret_list:
+                pass
             else:
-                return ret_list
+                ret_list.append(temp)
+                temp_children = self.get_neighbors(temp)
+                if len(temp_children) > 0:
+                    for edge in temp_children:
+                        node_stack.push(edge.end_vert)
 
         return ret_list
 

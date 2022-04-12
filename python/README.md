@@ -27,6 +27,7 @@
 + Code Challenges 35: [Implementation: Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph/README.md)
 + Code Challenges 36: [Breadth-First Traversal in Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph/README.md)
 + Code Challenges 37: [Graph Business Trip](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph_business_trip/README.md)
++ Code Challenges 38: [Depth-First Traversal in Graphs](https://github.com/micgreene/data-structures-and-algorithms/blob/master/python/code_challenges/graph/README.md)
 
 ### Folder and Challenge Setup
 
