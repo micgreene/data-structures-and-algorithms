@@ -103,6 +103,11 @@ class Graph():
         return ret_list
 
     def depth_first(self, node):
+        '''
+        Given a node, returns a collection of depth-first pre-ordered nodes that can be reached from the given node.
+        Input: Node
+        Output: List of Nodes
+        '''
         if node == None:
             return [None]
         elif len(self.get_neighbors(node)) == 0:
@@ -114,6 +119,7 @@ class Graph():
         node_stack.push(node)
 
         while node_stack.is_empty() is not True:
+            # pop last node off of stack, this ensures we stay in pre-ordered collection. We never look at the first encountered node in the list of children, always the last.
             temp = node_stack.pop()
             if temp in ret_list:
                 pass
